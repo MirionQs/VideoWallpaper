@@ -1,0 +1,10 @@
+<RCC>
+    <qresource prefix="/VideoWallpaper">
+        <file>icon/Desktop.svg</file>
+        <file>icon/Loop.svg</file>
+        <file>icon/NoLoop.svg</file>
+        <file>icon/OpenFile.svg</file>
+        <file>icon/Pause.svg</file>
+        <file>icon/Play.svg</file>
+    </qresource>
+</RCC>

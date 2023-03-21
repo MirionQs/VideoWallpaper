@@ -1,9 +1,9 @@
-#include "VideoDesktop.h"
-#include <QApplication>
+#include "VideoWallpaper.h"
+#include <QtWidgets/QApplication>
 
 int main(int argc, char* argv[]) {
     QApplication a(argc, argv);
-    VideoDesktop w;
+    VideoWallpaper w;
     w.show();
     return a.exec();
 }

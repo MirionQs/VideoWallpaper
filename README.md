@@ -1,12 +1,18 @@
-# VideoDesktop 0.1
+# VideoDesktop 1.0
 
-本程序基于以下环境开发。
+### 个人开发环境
 
-- Visual Studio 2019
-- Qt 6.2.0
-- libVLC 3.0.16
-- ffmpeg 4.4
+- Windows 11 22H2
+- Visual Studio 2022
+- Qt 6.5.0
+- libVLC 3.0.18
 
-因为Qt 6不再支持x64编译，所以本程序也不支持x86系统。
+### 兼容性
 
-Windows 11上已测试过没有什么特别严重的问题，因此理论上Windows 10也无大碍。
+- 不兼容 x86 操作系统
+- 不兼容 Windows 以外的操作系统
+- 不兼容 Windows 8 之前的操作系统
+
+### 示例
+
+![](./example.png)
