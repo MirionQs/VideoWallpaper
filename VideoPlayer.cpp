@@ -30,15 +30,15 @@ bool VideoPlayer::init() {
     // 将 VideoPlayer 置于桌面图标和壁纸的中间
     // 参考 https://www.codeproject.com/articles/856020/draw-behind-desktop-icons-in-windows
     HWND hPlayer = reinterpret_cast<HWND>(winId());
-    HWND hDesktop = FindWindow(L"Progman", nullptr);
+    HWND hDesktop = FindWindow(TEXT("Progman"), nullptr);
     if (!hDesktop || !SendMessageTimeout(hDesktop, 0x52c, 0, 0, SMTO_NORMAL, 1000, nullptr)) {
         return false;
     }
-    HWND hWorkerW = nullptr;
+    HWND hWorkerW = FindWindow(TEXT("WorkerW"), nullptr);
     HWND hDefView = nullptr;
     while (!hDefView) {
-        hDefView = FindWindowEx(hWorkerW, nullptr, L"SHELLDLL_DefView", nullptr);
-        hWorkerW = FindWindowEx(nullptr, hWorkerW, L"WorkerW", nullptr);
+        hDefView = FindWindowEx(hWorkerW, nullptr, TEXT("SHELLDLL_DefView"), nullptr);
+        hWorkerW = FindWindowEx(nullptr, hWorkerW, TEXT("WorkerW"), nullptr);
         if (!hWorkerW) {
             return false;
         }
